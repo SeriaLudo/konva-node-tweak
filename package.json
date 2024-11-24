@@ -1,6 +1,6 @@
 {
   "name": "konva-node-tweak",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Joel Kallstrom",
   "description": "A customized version of Konva with Node.js support",
   "files": [

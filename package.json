@@ -1,7 +1,7 @@
 {
   "name": "konva",
   "version": "9.3.16",
-  "author": "Anton Lavrenov",
+  "author": "Joel Kallstrom",
   "files": [
     "README.md",
     "konva.js",

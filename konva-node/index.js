@@ -1,39 +1,38 @@
-var Konva = require('konva');
-var canvas = require('canvas');
+import { Canvas, Image } from 'canvas'; // Import Canvas and Image from canvas
+import Konva from 'konva';
 
-// mock window
+// Mock window and document for Node.js
 Konva.window = {
-  Image: canvas.Image,
+  Image: Image,
   devicePixelRatio: 1,
 };
-// mock document
 Konva.document = {
-  createElement: function () {},
+  createElement: () => {},
   documentElement: {
-    addEventListener: function () {},
+    addEventListener: () => {},
   },
 };
 
-// make some global injections
+// Global polyfill for requestAnimationFrame
 global.requestAnimationFrame = (cb) => {
   setImmediate(cb);
 };
 
-// create canvas in Node env
+// Create canvas in Node.js environment
 Konva.Util.createCanvasElement = () => {
-  const node = new canvas.Canvas();
-  node.style = {};
+  const node = new Canvas();
+  node.style = {}; // Mock style object
   return node;
 };
 
-// create image in Node env
+// Create image in Node.js environment
 Konva.Util.createImageElement = () => {
-  const node = new canvas.Image();
-  node.style = {};
+  const node = new Image();
+  node.style = {}; // Mock style object
   return node;
 };
 
-// _checkVisibility use dom element, in node we can skip it
+// Disable _checkVisibility in Node.js
 Konva.Stage.prototype._checkVisibility = () => {};
 
-module.exports = Konva;
+export default Konva;

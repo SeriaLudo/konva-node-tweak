@@ -1,32 +1,22 @@
 {
-  "name": "konva-node",
-  "version": "0.11.2",
-  "description": "Konva framework for NodeJS env",
+  "name": "konva-node-custom",
+  "version": "1.0.0",
+  "description": "Customized Konva for Node.js environment",
   "main": "index.js",
-  "files": [
-    "index.js"
-  ],
   "type": "module",
-  "typings": "./node_modules/konva/konva.d.ts",
-  "scripts": {},
   "keywords": [
     "canvas",
-    "animations",
-    "graphic",
-    "html5"
+    "konva",
+    "node"
   ],
-  "author": "Anton Lavrenov",
-  "bugs": {
-    "url": "https://github.com/konvajs/konva/issues"
-  },
-  "homepage": "http://konvajs.org/",
   "repository": {
     "type": "git",
-    "url": "git://github.com/konvajs/konva.git"
+    "url": "https://github.com/your-username/konva-node-custom.git"
   },
+  "author": "Your Name <your-email@example.com>",
   "license": "MIT",
   "dependencies": {
-    "canvas": "^2.5.0",
-    "konva": "^7"
+    "konva": "^9.3.16",
+    "canvas": "^2.11.2"
   }
 }

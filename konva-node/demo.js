@@ -1,8 +1,12 @@
 import fs from 'fs';
+import Konva from './index.js'; // Adjust to your actual Konva import path
+import { Image } from 'canvas'; // Import Image from canvas
 
-// relative path here
-// but you will need just require('konva-node');
-import Konva from '../';
+// Set up Konva to use canvas.Image
+Konva.window = {
+  Image: Image,
+  devicePixelRatio: 1,
+};
 
 // Create stage. Container parameter is not required in NodeJS.
 var stage = new Konva.Stage({
@@ -46,7 +50,7 @@ setTimeout(function () {
   stage.toDataURL({
     callback: function (data) {
       // Then add result to stage
-      var img = new Konva.window.Image();
+      var img = new Konva.window.Image(); // Konva.window.Image is now set to canvas.Image
       img.onload = function () {
         var image = new Konva.Image({
           image: img,

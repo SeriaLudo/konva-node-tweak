@@ -1,5 +1,5 @@
 {
-  "name": "konva-node-custom",
+  "name": "konva-node",
   "version": "1.0.0",
   "description": "Customized Konva for Node.js environment",
   "main": "index.js",
@@ -16,7 +16,7 @@
   "author": "Your Name <your-email@example.com>",
   "license": "MIT",
   "dependencies": {
-    "konva": "^9.3.16",
+    "konva": "^9.0.0",
     "canvas": "^2.11.2"
   }
 }

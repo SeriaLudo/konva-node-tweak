@@ -1,3 +1,8 @@
+declare module 'konva-node-tweak' {
+  import * as Konva from 'konva';
+  export = Konva;
+}
+
 // the purpose of that file is very stupid
 // I was not able to generate correct typescript declarations from the main source code
 // because right now Konva is an object. Typescript can not define types from object like this:
